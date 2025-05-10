@@ -1,9 +1,9 @@
 import { useCallback, useState } from 'react';
 import './App.css';
 import Increment from './components/increment';
+import Tabform from './components/Tab/tabform';
 
 function App() {
-  const [activeTab, setActiveTab] = useState()
   const [count, setCount] = useState(0);
   const memoizedHandleIncrement = useCallback(() => {
     setCount(prev => prev +1)
@@ -13,6 +13,7 @@ function App() {
     <div className="App">
       <Increment addCounts = {memoizedHandleIncrement}/>
       {count}
+      <Tabform />
     </div>
   );
 }
