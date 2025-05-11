@@ -29,7 +29,6 @@ const Tabform = () => {
     ]
 
     const ActiveTabComponent = tabs[activeTab].component
-    console.log(activeTab)
     const handleNext = () => {
         setActiveTab(prev => prev +1)
     }
