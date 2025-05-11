@@ -29,6 +29,16 @@ const Tabform = () => {
     ]
 
     const ActiveTabComponent = tabs[activeTab].component
+    console.log(activeTab)
+    const handleNext = () => {
+        setActiveTab(prev => prev +1)
+    }
+    const handlePrevious = () => {
+        setActiveTab(prev => prev -1)
+    }
+    const handleSubmit = () => {
+       alert('Form Submitted Successfully!')
+    }
 
   return (
     <div>
@@ -46,6 +56,19 @@ const Tabform = () => {
             })}
         </div>
         <div className='tab-body'><ActiveTabComponent data = {formValue} setData = {setFormValue}/> </div>
+        <div className="div">
+            {
+                activeTab === 0 && <button style={{cursor: 'pointer'}} onClick={handleNext}>Next</button>
+            }
+            {
+                activeTab === 1 && <><button style={{cursor: 'pointer'}} onClick={handleNext}>Next</button>
+                <button style={{cursor: 'pointer'}} onClick={handlePrevious}>Previous</button>
+                </>
+            }
+            {
+                activeTab === tabs.length - 1 && <><button style={{ cursor: 'pointer' }} onClick={handleSubmit}>Submit</button><button style={{ cursor: 'pointer' }} onClick={handlePrevious}>Previous</button></>
+            }
+        </div>
     </div>
   )
 }
