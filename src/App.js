@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react';
 import './App.css';
 import Increment from './components/increment';
 import Tabform from './components/Tab/tabform';
+import Checkbox from './components/Checkbox/Checkbox';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
       <Increment addCounts = {memoizedHandleIncrement}/>
       {count}
       <Tabform />
+      <Checkbox />
     </div>
   );
 }

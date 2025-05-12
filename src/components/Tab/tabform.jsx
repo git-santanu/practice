@@ -44,13 +44,12 @@ const Tabform = () => {
         <div className='tab-parent'>
             {tabs.map((t, idx) => {
                 return (
-                    <>
+                    <div key={idx}>
                     <div 
-                    key={idx}
                     className='tab-heading'
                     onClick={()=>setActiveTab(idx)}
                     >{t.name}</div>
-                    </>
+                    </div>
                 )
             })}
         </div>
