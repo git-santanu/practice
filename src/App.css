@@ -24,5 +24,20 @@ height: 300px;
   flex-direction: column;
 }
 
+.circle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.circle-size {
+  margin-top: 50px;
+  border-radius: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
 
 
