@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import './App.css';
-import Increment from './components/increment';
+import Increment from './components/Increment/increment';
 import Tabform from './components/Tab/tabform';
 import Checkbox from './components/Checkbox/Checkbox';
 
